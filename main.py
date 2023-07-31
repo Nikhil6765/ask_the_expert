@@ -9,6 +9,9 @@ def read_from_file():
             country,city=line.split('/') # Country stores the word before "/" and 
                                          # City stores the word after "/"
 
+        
+            the_world[country]=city
+
 # creating function to add new country and new city to the text file 
 
 def write_to_file(country_name,city_name):
@@ -31,7 +34,6 @@ while True:
     query_country=simpledialog.askstring('country','Type The Name of the Country') # the first parameter is the title , the second parameter tells the user what to do
     if query_country in the_world:
         result=the_world[query_country]
-        messagebox.showinfo('Answer ', 'The Capital of ' + query_country + 'is' + result +'!')
+        messagebox.showinfo('Answer ', 'The Capital of ' + query_country + ' is ' + result +'!')
 
 
-root.mainloop()
