@@ -10,7 +10,7 @@ def read_from_file():
                                          # City stores the word after "/"
 
         
-            the_world[country]=city
+            the_world[country]=city # adds country and city to the_world - a dictionary
 
 # creating function to add new country and new city to the text file 
 
