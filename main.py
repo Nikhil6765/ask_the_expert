@@ -35,5 +35,11 @@ while True:
     if query_country in the_world:
         result=the_world[query_country]
         messagebox.showinfo('Answer ', 'The Capital of ' + query_country + ' is ' + result +'!')
+    
+    else:
+        new_city=simpledialog.askstring('Teach me', "I don't know! " 'What is the capital city of '+ query_country +'?')  # takes new city as an input
+        the_world[query_country]=new_city  # add new city to the  dictonary
+        write_to_file(query_country,new_city) # add country and new city to the text file 
 
 
+root.mainloop()
